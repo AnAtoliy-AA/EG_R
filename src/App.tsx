@@ -1,9 +1,10 @@
-import Header from './components/Header/Header'
-import { Router } from './router'
+import React from 'react'
+import Header from '@components/Header/Header'
+import Router from '@router'
 
-const App = (): JSX.Element => {
+function App(): JSX.Element {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
       <Router />
     </div>

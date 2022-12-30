@@ -1,12 +1,8 @@
-import React, { FC } from 'react';
-import './Header.scss';
+import React from 'react'
+import './Header.scss'
 
-interface HeaderProps {}
+function Header(): JSX.Element {
+  return <div className='Header'>Header Component</div>
+}
 
-const Header: FC<HeaderProps> = () => (
-  <div className="Header">
-    Header Component
-  </div>
-);
-
-export default Header;
+export default Header

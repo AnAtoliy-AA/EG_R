@@ -1,12 +1,8 @@
-import React, { FC } from 'react';
-import './Home.scss';
+import React from 'react'
+import './Home.scss'
 
-interface HomeProps {}
+function Home(): JSX.Element {
+  return <div className='Home'>Home Component</div>
+}
 
-const Home: FC<HomeProps> = () => (
-  <div className="Home">
-    Home Component
-  </div>
-);
-
-export default Home;
+export default Home

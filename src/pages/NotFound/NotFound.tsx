@@ -1,12 +1,8 @@
-import React, { FC } from 'react';
-import './NotFound.scss';
+import React from 'react'
+import './NotFound.scss'
 
-interface NotFoundProps {}
+function NotFound(): JSX.Element {
+  return <div className='NotFound'>NotFound Component</div>
+}
 
-const NotFound: FC<NotFoundProps> = () => (
-  <div className="NotFound">
-    NotFound Component
-  </div>
-);
-
-export default NotFound;
+export default NotFound
