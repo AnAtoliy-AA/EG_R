@@ -1,14 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { ghPages } from 'vite-plugin-gh-pages'
+import EnvironmentPlugin from 'vite-plugin-environment'
 import * as path from 'path'
 
-export const BASE_URL = '/EG_R/'
+const baseUrl = '/EG_R/' // in .env should be the same value (with import.meta jest fails)
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), ghPages()],
-  base: BASE_URL,
+  plugins: [react(), ghPages(), EnvironmentPlugin('all')],
+  base: baseUrl,
   resolve: {
     alias: [
       { find: '@router', replacement: path.resolve(__dirname, 'src/router') },
@@ -18,10 +19,6 @@ export default defineConfig({
       },
       { find: '@assets', replacement: path.resolve(__dirname, 'src/assets') },
       { find: '@pages', replacement: path.resolve(__dirname, 'src/pages') },
-      {
-        find: '@components',
-        replacement: path.resolve(__dirname, 'src/components'),
-      },
       {
         find: '@components',
         replacement: path.resolve(__dirname, 'src/components'),

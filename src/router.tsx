@@ -4,7 +4,7 @@ import Home from '@pages/Home/Home'
 import Letters from '@pages/Letters/Letters'
 import NotFound from '@pages/NotFound/NotFound'
 
-const baseUrl = import.meta.env.BASE_URL
+const baseUrl = process.env.BASE_URL ?? '\\'
 
 function Router(): JSX.Element {
   return (
