@@ -9,7 +9,12 @@
     "airbnb",
     "airbnb-typescript"
   ],
-  "overrides": [],
+  "overrides": [
+    {
+      "files": ["src/**/*Slice.ts"],
+      "rules": { "no-param-reassign": ["error", { "props": false }] }
+    }
+  ],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",

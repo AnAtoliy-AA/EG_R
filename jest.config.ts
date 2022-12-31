@@ -9,6 +9,8 @@ export default {
     '^@assets(.*)$': '<rootDir>/src/assets/$1',
     '^@pages(.*)$': '<rootDir>/src/pages/$1',
     '^@components(.*)$': '<rootDir>/src/components/$1',
+    '^@store(.*)$': '<rootDir>/src/store/$1',
+    '^@hooks(.*)$': '<rootDir>/src/hooks/$1',
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
   },
