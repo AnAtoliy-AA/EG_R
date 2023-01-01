@@ -11,6 +11,7 @@ export default {
     '^@components(.*)$': '<rootDir>/src/components/$1',
     '^@store(.*)$': '<rootDir>/src/store/$1',
     '^@hooks(.*)$': '<rootDir>/src/hooks/$1',
+    '^@data(.*)$': '<rootDir>/src/data/$1',
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/__mocks__/fileMock.js',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
   },

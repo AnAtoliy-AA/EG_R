@@ -4,10 +4,10 @@ import Router from '@router'
 
 function App(): JSX.Element {
   return (
-    <div className='App'>
+    <>
       <Header />
       <Router />
-    </div>
+    </>
   )
 }
 
