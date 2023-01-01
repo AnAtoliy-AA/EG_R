@@ -1,19 +1,21 @@
 import React from 'react'
-import { ILetter, mockLetters } from '@data/letters'
+import { ILetter, mockLetters } from '@data/mockLetters'
+import FlippableCard from '@components/FlippableCard/FlippableCard'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 `
 
 function Letters(): JSX.Element {
   return (
     <Container>
-      {mockLetters.map((letter: ILetter) => {
-        const { native } = letter
-
-        return <div key={native}>{native}</div>
-      })}
+      {mockLetters.map((letter: ILetter) => (
+        <FlippableCard key={letter?.native} letter={letter} />
+      ))}
     </Container>
   )
 }
